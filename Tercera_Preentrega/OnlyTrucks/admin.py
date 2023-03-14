@@ -1,3 +1,4 @@
 from django.contrib import admin
+from OnlyTrucks.models import Post
 
-# Register your models here.
+admin.site.register(Post)
