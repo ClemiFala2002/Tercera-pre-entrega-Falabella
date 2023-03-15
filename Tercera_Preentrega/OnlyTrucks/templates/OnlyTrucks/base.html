@@ -72,9 +72,9 @@
      
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+        <form action="{% url 'buscar-camion' %}" class="d-flex">
+          <input class="form-control me-2" name= "criterio" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
         </form>
       </div>
     </div>

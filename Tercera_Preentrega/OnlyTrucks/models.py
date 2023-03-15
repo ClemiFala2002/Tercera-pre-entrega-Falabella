@@ -5,7 +5,7 @@ class Post(models.Model):
     Marca_de_su_Camion = models.CharField(max_length=80)
     Año_de_Fabricacion = models.CharField(max_length=15)
     Descripcion = models.CharField(max_length=120)
-    Contacto= models.CharField(max_length=10)
+    Precio= models.CharField(max_length=10)
     
     def __str__(self):
-        return f"{self.id} - {self.Modelo_de_su_Camion}"
+        return f"{self.id} - {self.Modelo_de_su_Camion} - {self.Año_de_Fabricacion} - {self.Precio}"
