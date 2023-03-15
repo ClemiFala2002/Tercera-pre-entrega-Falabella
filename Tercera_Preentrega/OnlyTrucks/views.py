@@ -5,10 +5,10 @@ from OnlyTrucks.forms import PostForm
 def index(request):
     return render(request, "OnlyTrucks/index.html")
 
-def Camiones(request):
+def Resultado_de_Busqueda(request):
     
     posts = Post.objects.all()
-    return render(request, "OnlyTrucks/Camiones.html",{"posts": posts})
+    return render(request, "OnlyTrucks/Resultado_de_Busqueda.html",{"posts": posts})
 
 def mostrar_post(request):
     
