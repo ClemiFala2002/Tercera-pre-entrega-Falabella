@@ -3,7 +3,14 @@
 
 {% block main %}
 
-<h1>Hola esto es un template con herencia</h1>
+<h1>Resultados de su Busqueda</h1>
+
+<form action="{% url 'agregar-camion' %}" method="Post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="agregar">
+
+</form>
 
 <ul>
 {% for Post in posts %}
