@@ -59,3 +59,4 @@ def agregar_Remolque(request):
         "form": RemolquesForm(),
         "posts2": Remolques.objects.all(),
     }
+    return render(request, "OnlyTrucks/Remolques.html", context)

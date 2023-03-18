@@ -5,7 +5,7 @@
 
 <h1>Ingrese los Datos de su Acoplado</h1>
 
-<form action="{% url 'Agregar-Remolque' %}" method="Remolques">
+<form action="{% url 'Remolque' %}" method="Remolques">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value="agregar">
