@@ -15,13 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from OnlyTrucks.views import index, mostrar_post, agregar_post, buscar_post, Resultado_de_Busqueda 
+from OnlyTrucks.views import index, mostrar_post, agregar_post, buscar_post, Resultado_de_Busqueda, mostrar_Remolque, agregar_Remolque 
 
 urlpatterns = [
    path('admin/', admin.site.urls),
    path('', index, name="index"), 
    path('Resultado de Busqueda/', Resultado_de_Busqueda, name="Resultado Busqueda"), 
-   path('Busqueda/', mostrar_post, name="Busqueda"), 
-   path('Busqueda/agregar', agregar_post, name="agregar-camion"),
-   path('Busqueda/buscar', buscar_post, name="buscar-camion"), 
+   path('Camiones/', mostrar_post, name="Busqueda"), 
+   path('Camiones/agregar', agregar_post, name="agregar-camion"),
+   path('Camiones/buscar', buscar_post, name="buscar-camion"),
+   path('Acoplados/', mostrar_Remolque, name="Remolque"),
+   path('Acoplados/agregar', agregar_Remolque, name="Agregar-Remolque"),
 ]

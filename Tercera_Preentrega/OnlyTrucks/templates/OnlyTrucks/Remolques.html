@@ -3,9 +3,9 @@
 
 {% block main %}
 
-<h1>Ingrese los Datos de su Camion</h1>
+<h1>Ingrese los Datos de su Acoplado</h1>
 
-<form action="{% url 'agregar-camion' %}" method="Post">
+<form action="{% url 'Agregar-Remolque' %}" method="Remolques">
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" value="agregar">
@@ -13,8 +13,8 @@
 </form>
 
 <ul>
-{% for Post in posts %}
-<li>{{Post.id}} - {{ Post.Modelo_de_su_Camion }}</li>
+{% for Remolques in posts2 %}
+<li>{{Remolques.id}} - {{ Remolques.Modelo_de_su_Acoplado }}</li>
 {% endfor %}
 </ul>
 
