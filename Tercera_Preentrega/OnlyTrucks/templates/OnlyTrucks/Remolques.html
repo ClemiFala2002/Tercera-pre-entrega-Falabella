@@ -5,15 +5,15 @@
 
 <h1>Ingrese los Datos de su Acoplado</h1>
 
-<form action="{% url 'Remolque' %}" method="Remolques">
+<form action="{% url 'Agregar-Remolque' %}" method="post">
     {% csrf_token %}
-    {{form.as_p}}
+    {{formr.as_p}}
     <input type="submit" value="agregar">
 
 </form>
 
 <ul>
-{% for Remolques in posts2 %}
+{% for Remolques in Remolques %}
 <li>{{Remolques.id}} - {{ Remolques.Modelo_de_su_Acoplado }}</li>
 {% endfor %}
 </ul>

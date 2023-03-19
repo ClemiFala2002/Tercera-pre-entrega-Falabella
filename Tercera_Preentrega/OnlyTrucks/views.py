@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from OnlyTrucks.models import Post, Remolques, Concesionaria
-from OnlyTrucks.forms import PostForm, RemolquesForm
+from OnlyTrucks.forms import PostForm, RemolquesForm, ConsesionariaForm
 
 def index(request):
     return render(request, "OnlyTrucks/index.html")
@@ -40,14 +40,14 @@ def buscar_post(request):
 
 def Resultado_de_Remolque(request):
     
-    posts2 = Remolques.objects.all()
-    return render(request, "OnlyTrucks/Resultado_de_Busqueda_R.html",{"posts2": posts2})
+    remolques = Remolques.objects.all()
+    return render(request, "OnlyTrucks/Resultado_de_Busqueda_R.html",{"remolques": remolques})
 
 def mostrar_Remolque(request):
     
     context = {
-        "form": RemolquesForm(),
-        "posts2": Remolques.objects.all(),
+        "formr": RemolquesForm(),
+        "Remolques": Remolques.objects.all(),
     }
     
     return render(request, "OnlyTrucks/Remolques.html", context )
@@ -56,7 +56,30 @@ def agregar_Remolque(request):
     remolques_form = RemolquesForm(request.POST)
     remolques_form.save()
     context = {
-        "form": RemolquesForm(),
-        "posts2": Remolques.objects.all(),
+        "formr": RemolquesForm(),
+        "Remolques": Remolques.objects.all(),
     }
     return render(request, "OnlyTrucks/Remolques.html", context)
+
+def Resultado_de_Consesionaria(request):
+    
+    concesionaria = Concesionaria.objects.all()
+    return render(request, "OnlyTrucks/Resultado_de_Busqueda_C.html",{"concesionaria": concesionaria})
+
+def mostrar_Consesionaria(request):
+    
+    context = {
+        "formc": ConsesionariaForm(),
+        "Consesionaria": Concesionaria.objects.all(),
+    }
+    
+    return render(request, "OnlyTrucks/Consesionaria.html", context )
+
+def agregar_Consesionaria(request):
+    remolques_form = ConsesionariaForm(request.POST)
+    remolques_form.save()
+    context = {
+        "formc": ConsesionariaForm(),
+        "Consesionaria": Concesionaria.objects.all(),
+    }
+    return render(request, "OnlyTrucks/Consesionaria.html", context)
