@@ -41,7 +41,7 @@ def buscar_post(request):
 def Resultado_de_Remolque(request):
     
     remolques = Remolques.objects.all()
-    return render(request, "OnlyTrucks/Resultado_de_Busqueda_R.html",{"remolques": remolques})
+    return render(request, "OnlyTrucks/Resultado_de_Busqueda_R.html",{"Remolques": remolques})
 
 def mostrar_Remolque(request):
     

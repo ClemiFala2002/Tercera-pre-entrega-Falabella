@@ -9,12 +9,12 @@
       
         
           <div class="carousel-item active">
-              <img src="{% static 'OnlyTrucks/assets/puente-corrientes-resistencia.jpeg' %}">
+              <img src="{% static 'OnlyTrucks/assets/fondo-principal.jpg' %}">
             <div class="container">
               <div class="carousel-caption text-start">
-                <h1>Puente Gral. Belgrano</h1>
-                <p>Une  Chaco con Corrientes</p>
-                <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Sign up today</a></p>
+                <h1>Camiones 0KM</h1>
+                <p>vea nuestro catalogo</p>
+                <p><a class="btn btn-lg btn-primary" href="{%url 'Resultado Busqueda'%}">Ver Camiones</a></p>
               </div>
             </div>
           </div>
@@ -22,12 +22,12 @@
       
         
         <div class="carousel-item">
-          <img src="{% static 'OnlyTrucks/assets/cataratas-del-iguazu-misiones.jpeg' %}">
+          <img src="{% static 'OnlyTrucks/assets/randon-acoplado.jpeg' %}">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Cataratas del Iguazu</h1>
-              <p>Maravilla Natural</p>
-              <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">Learn more</a></p>
+              <h1>Acoplados de Fabrica</h1>
+              <p>Amplia gama de Modelos</p>
+              <p><a class="btn btn-lg btn-primary" href="{%url 'Resultado BusquedaR'%}">Ver Modelos</a></p>
             </div>
           </div>
         </div>
@@ -58,17 +58,17 @@
 
     
       <div class="col-lg-4">
-        <img src="{% static 'OnlyTrucks/assets/puente-corrientes-resistencia.jpeg' %}" height="144" width="144">
-        <h2>El puente</h2>
-        <p>vistas lindas del rio</p>
-        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">View details »</a></p>
+        <img src="{% static 'OnlyTrucks/assets/fiat-619.jpg' %}" height="144" width="144">
+        <h2>Camiones Usados</h2>
+        <p>Venda su Camion pulsando aqui</p>
+        <p><a class="btn btn-secondary" href="{%url 'Busqueda'%}">Vender »</a></p>
       </div><!-- /.col-lg-4 -->
     
       <div class="col-lg-4">
-        <img src="{% static 'OnlyTrucks/assets/cataratas-del-iguazu-misiones.jpeg' %}" height="144" width="144">
-        <h2>Las cataratas</h2>
-        <p>un destino imperdible</p>
-        <p><a class="btn btn-secondary" href="https://getbootstrap.com/docs/5.0/examples/carousel/#">View details »</a></p>
+        <img src="{% static 'OnlyTrucks/assets/acoplado-3ejes-mixto.jpg' %}" height="144" width="144">
+        <h2>Acoplados Usados</h2>
+        <p>Venda su acoplado pulsando aqui</p>
+        <p><a class="btn btn-secondary" href="{%url 'Remolque'%}">Vender »</a></p>
       </div><!-- /.col-lg-4 -->
       
     </div><!-- /.row -->
@@ -81,39 +81,18 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">El puente</h2>
-        <p class="lead">vistas lindas del rio</p>
+        <h2 class="featurette-heading">Consecionarias</h2>
+        <p class="lead">Estamos en cada punto del pais</p>
+        <p><a class="btn btn-secondary" href="{%url 'Resultado BusquedaR'%}">Ver Concesionarios »</a></p>
       </div>
       <div class="col-md-5 order-md-1">
         
-          <img src="{% static 'OnlyTrucks/assets/puente-corrientes-resistencia.jpeg' %}" height="400" width="400">
+          <img src="{% static 'OnlyTrucks/assets/concesionariacamiones.jpg' %}" height="400" width="400">
         
+          
 
       </div>
     </div>
-
-    
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Las cataratas</h2>
-        <p class="lead">un destino imperdible</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        
-          <img src="{% static 'OnlyTrucks/assets/cataratas-del-iguazu-misiones.jpeg' %}" height="400" width="400">
-        
-
-      </div>
-    </div>
-
-    
-
-
-    <!-- /END THE FEATURETTES -->INDEX.
-
-  </div><!-- /.container -->
 
 
   <!-- FOOTER -->
